@@ -48,8 +48,8 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-## 👨‍💻 Team Members  
-
+## 👨‍💻 Team Members 
+- Omar Saad Abdelfttah
 - Youssef Gerges Awad  
 - Omar Hamdy Fathy  
 - Ahmed Magdy Mohamed  
