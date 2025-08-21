@@ -25,8 +25,23 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-## 📂 Project Setup
+## 🚀 Project Plan
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/android-team1/movie-discovery-app.git
+### 1️⃣ Project Setup and UI Design
+- Initialize GitHub repository & project structure  
+- Set up Jetpack Compose  
+- Build basic UI components (movie cards, lists, etc.)
+
+### 2️⃣ API Integration and Dynamic Display
+- Connect to **TMDB API**  
+- Fetch & parse JSON responses  
+- Display movies dynamically in the UI  
+
+### 3️⃣ Navigation and Detail Screen
+- Implement navigation between screens  
+- Create a detailed movie page (poster, title, overview, rating, etc.)  
+
+### 4️⃣ Search, Security, and Final Polish
+- Add search functionality  
+- Handle errors & secure API key  
+- Apply final UI/UX polish and testing  
