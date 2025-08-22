@@ -6,7 +6,7 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 ---
 
 ## 🖼️ Project Screenshot
-![Movie Discovery App Screenshot](images/movie_app_screenshot.png)  
+![Movie Discovery App Screenshot](https://user-images.githubusercontent.com/XXXXXXX/movie_app_screenshot.png)  
 *لقطة شاشة للتطبيق توضح الواجهة الرئيسية.*
 
 ---
@@ -55,7 +55,8 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 ---
 
 ## 👨‍💻 Team Members  
-- Omar Saad Abdelfttah
+
+- Omar Saad Abdel-Fattah  
 - Youssef Gerges Awad  
 - Omar Hamdy Fathy  
 - Ahmed Magdy Mohamed  
