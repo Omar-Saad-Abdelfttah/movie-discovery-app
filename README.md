@@ -5,6 +5,12 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
+## 🖼️ Project Screenshot
+![Movie Discovery App Screenshot](images/movie_app_screenshot.png)  
+*لقطة شاشة للتطبيق توضح الواجهة الرئيسية.*
+
+---
+
 ## 🚀 Features  
 - Browse popular movies from **TMDB API**  
 - View detailed information about a selected movie *(title, poster, rating, release date, overview)*  
@@ -48,7 +54,7 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-## 👨‍💻 Team Members 
+## 👨‍💻 Team Members  
 - Omar Saad Abdelfttah
 - Youssef Gerges Awad  
 - Omar Hamdy Fathy  
