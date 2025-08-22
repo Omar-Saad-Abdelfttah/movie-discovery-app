@@ -6,9 +6,8 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 ---
 
 ## 🖼️ Project Screenshot
-![Movie Discovery App Screenshot](https://user-images.githubusercontent.com/XXXXXXX/movie_app_screenshot.png)  ![movie_app_screenshot png](https://github.com/user-attachments/assets/657117e5-543f-4b54-85bd-58b617fe12df)
+ ![movie_app_screenshot png](https://github.com/user-attachments/assets/657117e5-543f-4b54-85bd-58b617fe12df)
 
-*لقطة شاشة للتطبيق توضح الواجهة الرئيسية.*
 
 ---
 
