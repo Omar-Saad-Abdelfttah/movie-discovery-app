@@ -1,6 +1,5 @@
 ## 🖼️ Project Screenshot
-![Movie Discovery App Screenshot](https://user-images.githubusercontent.com/XXXXXXX/movie_app_screenshot.png)  ![Uploading movie_app_screenshot.png.png…]()
-
+<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/9c20e682-8e29-471c-a4bc-34a68542ef62" />
 ---
 
 # 🎬 Movie Discovery App  
