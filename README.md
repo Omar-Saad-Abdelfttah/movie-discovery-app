@@ -1,5 +1,12 @@
-## 🖼️ Project Screenshot
-<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/9c20e682-8e29-471c-a4bc-34a68542ef62" />
+## 🖼️ Project Screenshot  
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9c20e682-8e29-471c-a4bc-34a68542ef62" 
+       alt="Movie Discovery App Screenshot" 
+       width="500" 
+       style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+</p>
+
 ---
 
 # 🎬 Movie Discovery App  
