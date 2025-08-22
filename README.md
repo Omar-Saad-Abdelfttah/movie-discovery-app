@@ -1,6 +1,6 @@
 ## 🖼️ Project Screenshot  
 
-<p align="center">
+<p align="left">
   <img src="https://github.com/user-attachments/assets/9c20e682-8e29-471c-a4bc-34a68542ef62" 
        alt="Movie Discovery App Screenshot" 
        width="500" 
