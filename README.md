@@ -1,10 +1,10 @@
 ## 🖼️ Project Screenshot  
 
-<p align="left">
+<p align="center">
   <img src="https://github.com/user-attachments/assets/9c20e682-8e29-471c-a4bc-34a68542ef62" 
        alt="Movie Discovery App Screenshot" 
-       width="300" 
-       style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+       width="500" 
+       style="border-radius: 13px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
 </p>
 
 ---
