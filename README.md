@@ -14,7 +14,6 @@
 A modern Android application built with **Kotlin** and **Jetpack Compose** to browse and discover movies.  
 This project is part of the **Digital Egypt Pioneers Initiative**.  
 
-
 ---
 
 ## 🚀 Features  
@@ -67,3 +66,52 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 - Omar Hamdy Fathy  
 - Ahmed Magdy Mohamed  
 - Bassem Ragy Yehia  
+
+---
+
+## 📌 Roles & Responsibilities  
+
+### 👑 Team Leader  
+- **Omar Saad Abdel-Fattah**  
+  - Project Leader  
+  - Documentation & README updates  
+  - Reviewing code & merging pull requests  
+  - Final delivery & submission  
+
+---
+
+### 👨‍🎨 Week 1: Project Setup & UI Design  
+- **Youssef Gerges Awad**  
+  - Initialize GitHub repository & project structure  
+  - Set up Jetpack Compose environment  
+  - Build static UI screens (Home grid, Movie cards)  
+  - Apply Material Design 3 principles  
+
+---
+
+### 🔗 Week 2: API Integration & Dynamic Display  
+- **Omar Hamdy Fathy**  
+  - Integrate Retrofit with TMDB API  
+  - Create data models for JSON responses  
+  - Connect API with UI (Lazy grid of movies)  
+  - Handle network errors & loading states  
+
+---
+
+### 📱 Week 3: Navigation & Detail Screen  
+- **Ahmed Magdy Mohamed**  
+  - Implement Jetpack Navigation Component  
+  - Build Detail Screen (Poster, Title, Overview, Rating, Release Date)  
+  - Pass movie data between screens  
+  - Write unit tests for data transformation logic  
+
+---
+
+### 🔍 Week 4: Search, Security & Testing  
+- **Bassem Ragy Yehia**  
+  - Add Search functionality (search bar + results)  
+  - Secure API key in `gradle.properties`  
+  - Write unit tests for business logic  
+  - Apply UI polish (animations, error screens, loading indicators)  
+
+---
