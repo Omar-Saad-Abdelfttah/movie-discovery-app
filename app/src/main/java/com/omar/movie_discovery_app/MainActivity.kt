@@ -1,5 +1,5 @@
 package com.omar.movie_discovery_app
-
+//test
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
