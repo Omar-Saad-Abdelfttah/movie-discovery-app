@@ -81,6 +81,13 @@ fun MovieDetailsScreen(movie: Movie, modifier: Modifier = Modifier) {
             }
             Spacer(modifier = Modifier.height(18.dp))
 
+            // Overview
+            Text(
+                text = movie.overview,
+                color = Color(0xFFD6D8DE),
+                fontSize = 16.sp,
+                lineHeight = 22.sp
+            )
         }
     }
 }
