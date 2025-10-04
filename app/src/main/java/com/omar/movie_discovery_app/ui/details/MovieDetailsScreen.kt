@@ -38,6 +38,25 @@ fun MovieDetailsScreen(movie: Movie, modifier: Modifier = Modifier) {
             .fillMaxSize()
             .background(backgroundColor)
     ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 20.dp, vertical = 20.dp)
+        ) {
+            // Poster
+            AsyncImage(
+                model = movie.posterUrl,
+                contentDescription = "${movie.title} poster",
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(220.dp)
+                    .clip(RoundedCornerShape(16.dp)),
+                contentScale = ContentScale.Crop
+            )
+            Spacer(modifier = Modifier.height(18.dp))
+
+        }
     }
 }
 
