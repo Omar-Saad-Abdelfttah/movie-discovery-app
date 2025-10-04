@@ -91,6 +91,20 @@ fun MovieDetailsScreen(movie: Movie, modifier: Modifier = Modifier) {
         }
     }
 }
+@Preview(showBackground = true)
+@Composable
+fun MovieDetailsPreview() {
+    val sampleMovie = Movie(
+        id = 1,
+        title = "The Lord of the Rings: The Fellowship of the Ring",
+        overview = "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+        posterUrl = "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+        rating = 8.8,
+        runtime = "2h 58m",
+        year = 2001
+    )
+    MovieDetailsScreen(movie =sampleMovie)
+}
 
 
 
