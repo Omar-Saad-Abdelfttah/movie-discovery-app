@@ -19,5 +19,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+data class Movie(
+    val id: Int,
+    val title: String,
+    val overview: String,
+    val posterUrl: String,
+    val rating: Double,
+    val runtime: String,
+    val year: Int
+)
+
 class MovieDetailsScreen {
 }
