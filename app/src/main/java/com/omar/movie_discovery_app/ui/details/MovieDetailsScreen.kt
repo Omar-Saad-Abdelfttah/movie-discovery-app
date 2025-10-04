@@ -18,6 +18,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
+
 
 data class Movie(
     val id: Int,
@@ -28,6 +30,19 @@ data class Movie(
     val runtime: String,
     val year: Int
 )
-
-class MovieDetailsScreen {
+@Composable
+fun MovieDetailsScreen(movie: Movie, modifier: Modifier = Modifier) {
+    val backgroundColor = Color(0xFF0B1220)
+    Surface(
+        modifier = modifier
+            .fillMaxSize()
+            .background(backgroundColor)
+    ) {
+    }
 }
+
+
+
+
+
+
