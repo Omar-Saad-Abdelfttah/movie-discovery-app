@@ -56,6 +56,15 @@ fun MovieDetailsScreen(movie: Movie, modifier: Modifier = Modifier) {
             )
             Spacer(modifier = Modifier.height(18.dp))
 
+            // Title
+            Text(
+                text = movie.title,
+                color = Color.White,
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold
+            )
+            Spacer(modifier = Modifier.height(10.dp))
+
         }
     }
 }
