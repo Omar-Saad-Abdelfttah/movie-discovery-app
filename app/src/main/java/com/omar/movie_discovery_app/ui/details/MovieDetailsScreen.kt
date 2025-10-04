@@ -65,6 +65,22 @@ fun MovieDetailsScreen(movie: Movie, modifier: Modifier = Modifier) {
             )
             Spacer(modifier = Modifier.height(10.dp))
 
+            // Rating + runtime + year
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    imageVector = Icons.Default.Star,
+                    contentDescription = "rating",
+                    tint = Color(0xFFFFD24D)
+                )
+                Spacer(modifier = Modifier.width(6.dp))
+                Text(text = String.format("%.1f", movie.rating), color = Color.LightGray)
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(text = movie.runtime, color = Color.Gray)
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(text = movie.year.toString(), color = Color.Gray)
+            }
+            Spacer(modifier = Modifier.height(18.dp))
+
         }
     }
 }
