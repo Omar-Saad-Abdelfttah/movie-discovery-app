@@ -1,6 +1,7 @@
 package com.omar.movie_discovery_app.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -16,16 +17,20 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.omar.movie_discovery_app.ui.screens.Movie
+import com.omar.movie_discovery_app.model.Movie  // ✅ التعديل هنا فقط
 
 @Composable
-fun MovieCard(movie: Movie) {
+fun MovieCard(
+    movie: Movie,
+    onClick: (Movie) -> Unit
+) {
     Column(
         modifier = Modifier
             .padding(8.dp)
             .clip(RoundedCornerShape(12.dp))
             .background(Color.DarkGray)
             .fillMaxWidth()
+            .clickable { onClick(movie) }
     ) {
         AsyncImage(
             model = movie.posterUrl,

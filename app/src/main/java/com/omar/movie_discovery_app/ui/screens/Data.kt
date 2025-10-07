@@ -1,6 +1,13 @@
 package com.omar.movie_discovery_app.ui.screens
 
-data class Movie(val title: String, val posterUrl: String)
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+data class Movie(
+    val title: String,
+    val posterUrl: String
+) : Parcelable
 
 val sampleMovies = listOf(
     Movie("Oppenheimer", "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEG1cmV1m2j7.jpg"),

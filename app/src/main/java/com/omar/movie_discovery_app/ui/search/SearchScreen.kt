@@ -12,9 +12,16 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import com.omar.movie_discovery_app.data.sampleMovies
+import com.omar.movie_discovery_app.model.Movie
 
 @Composable
-fun SearchScreen(movies: List<Movie> = sampleMovies) {
+fun SearchScreen(
+    navController: NavController,
+    movies: List<Movie> = sampleMovies,
+    onMovieClick: (Movie) -> Unit
+) {
     var query by remember { mutableStateOf("") }
 
     Column(
@@ -63,7 +70,10 @@ fun SearchScreen(movies: List<Movie> = sampleMovies) {
             modifier = Modifier.fillMaxSize()
         ) {
             items(filteredMovies) { movie ->
-                MovieItem(movie)
+                MovieItem(
+                    movie = movie,
+                    onClick = { onMovieClick(movie) }
+                )
             }
         }
     }
