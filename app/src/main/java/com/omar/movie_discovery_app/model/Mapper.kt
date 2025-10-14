@@ -1,6 +1,6 @@
-package com.omar.movie_discovery_app.model.API.Model
+package com.omar.movie_discovery_app.model
 
-import com.omar.movie_discovery_app.model.UI.Models.Movie
+import com.omar.movie_discovery_app.model.ApiMovie
 
 fun ApiMovie.toMovie(): Movie {
     return Movie(

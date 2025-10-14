@@ -1,4 +1,4 @@
-package com.omar.movie_discovery_app.model.UI.Models
+package com.omar.movie_discovery_app.model
 
 data class MovieResponse(
     val page: Int,

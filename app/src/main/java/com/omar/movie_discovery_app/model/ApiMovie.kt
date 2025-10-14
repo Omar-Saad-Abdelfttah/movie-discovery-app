@@ -1,4 +1,4 @@
-package com.omar.movie_discovery_app.model.API.Model
+package com.omar.movie_discovery_app.model
 
 import com.google.gson.annotations.SerializedName
 

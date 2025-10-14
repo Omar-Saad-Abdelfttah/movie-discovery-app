@@ -1,6 +1,6 @@
 package com.omar.movie_discovery_app.data.network
 
-import com.omar.movie_discovery_app.model.API.Model.ApiMovieResponse
+import com.omar.movie_discovery_app.model.ApiMovieResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
