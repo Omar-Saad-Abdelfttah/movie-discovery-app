@@ -1,3 +1,4 @@
+
 package com.omar.movie_discovery_app.ui.screens
 
 import androidx.compose.foundation.clickable
