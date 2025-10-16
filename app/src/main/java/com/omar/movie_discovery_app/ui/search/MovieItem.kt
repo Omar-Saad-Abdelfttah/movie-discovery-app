@@ -14,7 +14,6 @@ import coil.compose.AsyncImage
 import com.omar.movie_discovery_app.model.Movie
 import androidx.compose.ui.unit.dp
 
-
 @Composable
 fun MovieItem(
     movie: Movie,
@@ -26,14 +25,17 @@ fun MovieItem(
             .width(150.dp)
             .clickable { onClick(movie) }
     ) {
+        val posterUrl = "https://image.tmdb.org/t/p/w500${movie.poster_path}"
+
         AsyncImage(
-            model = movie.posterUrl,
+            model = movie.imageUrl,
             contentDescription = movie.title,
             modifier = Modifier
                 .height(200.dp)
                 .clip(RoundedCornerShape(12.dp)),
             contentScale = ContentScale.Crop
         )
+
 
         Text(
             text = movie.title,
