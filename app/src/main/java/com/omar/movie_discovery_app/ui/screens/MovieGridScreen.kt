@@ -16,7 +16,6 @@ import com.omar.movie_discovery_app.ui.components.MovieCard
 import com.omar.movie_discovery_app.model.Movie
 import com.omar.movie_discovery_app.data.sampleMovies
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MovieGridScreen(
@@ -50,7 +49,6 @@ fun MovieGridScreen(
             )
         )
 
-
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             modifier = Modifier
@@ -63,7 +61,10 @@ fun MovieGridScreen(
             items(sampleMovies) { movie ->
                 MovieCard(
                     movie = movie,
-                    onClick = { onMovieClick(movie) }
+                    onClick = {
+                        onMovieClick(movie)
+                    }
+
                 )
             }
         }
