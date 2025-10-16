@@ -23,6 +23,7 @@ android {
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "TMDB_API_KEY", "\"${secretsProperties["TMDB_API_KEY"]}\"")
+
     }
 
     buildTypes {
@@ -43,6 +44,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -69,4 +71,6 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
+    implementation("io.coil-kt:coil-compose:2.4.0")
+
 }
