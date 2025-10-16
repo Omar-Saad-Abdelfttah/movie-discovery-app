@@ -16,7 +16,6 @@ import com.omar.movie_discovery_app.ui.components.MovieCard
 import com.omar.movie_discovery_app.model.Movie
 import com.omar.movie_discovery_app.data.sampleMovies
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MovieGridScreen(
@@ -49,7 +48,6 @@ fun MovieGridScreen(
                 containerColor = Color(0xFF101010)
             )
         )
-
 
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
