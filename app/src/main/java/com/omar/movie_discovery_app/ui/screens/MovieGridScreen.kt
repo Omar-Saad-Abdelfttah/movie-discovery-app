@@ -61,7 +61,10 @@ fun MovieGridScreen(
             items(sampleMovies) { movie ->
                 MovieCard(
                     movie = movie,
-                    onClick = { onMovieClick(movie) }
+                    onClick = {
+                        onMovieClick(movie)
+                    }
+
                 )
             }
         }
