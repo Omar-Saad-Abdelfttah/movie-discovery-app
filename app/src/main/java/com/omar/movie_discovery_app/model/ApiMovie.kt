@@ -1,11 +1,13 @@
 package com.omar.movie_discovery_app.model
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class ApiMovie(
-    @SerializedName("id") val id: Int,
-    @SerializedName("title") val title: String,
-    @SerializedName("overview") val overview: String,
-    @SerializedName("poster_path") val posterPath: String?,
-    @SerializedName("release_date") val releaseDate: String
+    val id: Int,
+    val title: String,
+    val overview: String,
+    val poster_path: String?,
+    val vote_average: Double,
+    val release_date: String
 )

@@ -1,11 +1,12 @@
 package com.omar.movie_discovery_app.model
 
-import com.omar.movie_discovery_app.model.ApiMovie
-
 fun ApiMovie.toMovie(): Movie {
     return Movie(
         id = this.id,
         title = this.title,
-        posterUrl = "https://image.tmdb.org/t/p/w500${this.posterPath}"
+        overview = this.overview,
+        poster_path = this.poster_path,
+        vote_average = this.vote_average,
+        release_date = this.release_date
     )
 }

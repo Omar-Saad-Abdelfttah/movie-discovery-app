@@ -69,6 +69,7 @@ fun SearchScreen(
                     searchResults = emptyList()
                 }
             },
+            textStyle = LocalTextStyle.current.copy(color = Color.White),
             placeholder = { Text("Search movies...", color = Color.Gray) },
             leadingIcon = {
                 Icon(Icons.Default.Search, contentDescription = "Search", tint = Color.Gray)
@@ -80,9 +81,14 @@ fun SearchScreen(
                 unfocusedBorderColor = Color.Transparent,
                 focusedContainerColor = Color(0xFF1A1A1A),
                 unfocusedContainerColor = Color(0xFF1A1A1A),
-                cursorColor = Color.White
+                cursorColor = Color.White,
+                focusedTextColor = Color.White,
+                unfocusedTextColor = Color.White,
+                focusedLeadingIconColor = Color.Gray,
+                unfocusedLeadingIconColor = Color.Gray
             )
         )
+
 
         Spacer(modifier = Modifier.height(20.dp))
 
@@ -107,7 +113,9 @@ fun SearchScreen(
             }
         }
     }
-}@Composable
+}
+
+@Composable
 fun MovieSearchItem(movie: Movie, onClick: () -> Unit) {
     Column(
         modifier = Modifier
@@ -115,8 +123,10 @@ fun MovieSearchItem(movie: Movie, onClick: () -> Unit) {
             .background(Color(0xFF1A1A1A), shape = MaterialTheme.shapes.medium)
             .padding(4.dp)
     ) {
+        val posterUrl = "https://image.tmdb.org/t/p/w500${movie.poster_path}"
+
         AsyncImage(
-            model = movie.posterUrl,
+            model = posterUrl,
             contentDescription = movie.title,
             modifier = Modifier
                 .fillMaxWidth()
