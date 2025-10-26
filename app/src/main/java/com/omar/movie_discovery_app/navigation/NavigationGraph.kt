@@ -9,13 +9,19 @@ import androidx.navigation.navArgument
 import com.omar.movie_discovery_app.ui.details.MovieDetailsScreenById
 import com.omar.movie_discovery_app.ui.screens.MovieGridScreen
 import com.omar.movie_discovery_app.ui.screens.SearchScreen
+import com.omar.movie_discovery_app.ui.screens.SplashScreen // ← ضيف ده
 
 @Composable
 fun NavigationGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
-        startDestination = "home"
+        startDestination = "splash"
     ) {
+
+
+        composable("splash") {
+            SplashScreen(navController = navController)
+        }
 
         composable("home") {
             MovieGridScreen(
