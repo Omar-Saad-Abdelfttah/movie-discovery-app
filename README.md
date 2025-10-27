@@ -71,7 +71,7 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ## 📌 Roles & Responsibilities  
 
-### 👑 Omar Saad Abdel-Fattah (Team Leader + Developer)  
+### 👑 Omar Saad Abdel-Fattah (Team Leader)  
 - Project Leader & Documentation (README, project plan, roles).  
 - Review & merge pull requests.  
 - UI Polish (Animations, Loading Indicators, Error Screens).  
@@ -79,7 +79,7 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-### 👨‍🎨 Youssef Gerges Awad (Week 1 – UI Design & Setup)  
+### 👨‍🎨 Youssef Gerges Awad  
 - Initialize project & GitHub repository.  
 - Set up Jetpack Compose environment.  
 - Build static UI screens (Home grid, Movie cards).  
@@ -87,7 +87,7 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-### 🔗 Omar Hamdy Fathy (Week 2 – API Integration)  
+### 🔗 Omar Hamdy Fathy 
 - Integrate Retrofit with TMDB API.  
 - Create data models for JSON responses.  
 - Connect API with UI (Lazy grid of movies).  
@@ -95,7 +95,7 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-### 📱 Ahmed Magdy Mohamed (Week 3 – Navigation & Detail Screen)  
+### 📱 Ahmed Magdy Mohamed 
 - Implement Jetpack Navigation Component.  
 - Build Detail Screen (Poster, Title, Overview, Rating, Release Date).  
 - Pass movie data between screens.  
@@ -103,7 +103,7 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-### 🔍 Bassem Ragy Yehia (Week 4 – Search & Security)  
+### 🔍 Bassem Ragy Yehia  
 - Add Search functionality (search bar + results).  
 - Secure API key in `gradle.properties`.  
 - Improve performance (Caching, Lazy Loading).  
