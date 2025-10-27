@@ -96,8 +96,9 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 ---
 
 ### 📱 Ahmed Magdy Mohamed 
+- Build Detail Screen (Poster, Title, Overview, Rating, Release Date).
+- Configured Retrofit for API communication.
 - Implement Jetpack Navigation Component.  
-- Build Detail Screen (Poster, Title, Overview, Rating, Release Date).  
 - Pass movie data between screens.  
 - Write unit tests for data transformation logic.  
 
