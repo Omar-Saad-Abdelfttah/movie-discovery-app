@@ -113,19 +113,3 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 - Apply final UI polish (animations, error handling, loading indicators).  
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
