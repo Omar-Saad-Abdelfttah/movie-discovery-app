@@ -1,12 +1,12 @@
 //package com.omar.movie_discovery_app.data
 
-import com.omar.movie_discovery_app.model.Movie
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.runtime.Composable
-import androidx.navigation.compose.rememberNavController
-import com.omar.movie_discovery_app.navigation.NavigationGraph
+//import com.omar.movie_discovery_app.model.Movie
+//import android.os.Bundle
+//import androidx.activity.ComponentActivity
+//import androidx.activity.compose.setContent
+//import androidx.compose.runtime.Composable
+//import androidx.navigation.compose.rememberNavController
+//import com.omar.movie_discovery_app.navigation.NavigationGraph
 //val sampleMovies = listOf(
 // Movie(1, "Oppenheimer", "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEG1cmV1m2j7.jpg"),
 //Movie(2, "Barbie", "https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg"),
