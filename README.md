@@ -97,10 +97,12 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ### 📱 Ahmed Magdy Mohamed 
 - Build Detail Screen (Poster, Title, Overview, Rating, Release Date).
-- Configured Retrofit for API communication.
-- Implement Jetpack Navigation Component.  
-- Pass movie data between screens.  
-- Write unit tests for data transformation logic.  
+- Configured (Retrofit) for API communication.
+- Created (API Service) interfaces with all required endpoints
+- Verified successful connection between the app and the API.
+- Implement Jetpack Navigation Component.
+- Implemented Security configuration by storing the TMDB API key securely as required.
+
 
 ---
 
@@ -111,3 +113,19 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 - Apply final UI polish (animations, error handling, loading indicators).  
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
