@@ -95,14 +95,15 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-### 📱 Ahmed Magdy Mohamed 
-- Build Detail Screen (Poster, Title, Overview, Rating, Release Date).
-- Configured (Retrofit) for API communication.
-- Created (API Service) interfaces with all required endpoints
-- Verified successful connection between the app and the API.
-- Implement Jetpack Navigation Component.
-- Implemented Security configuration by storing the TMDB API key securely as required.
-
+### 📱 Ahmed Magdy Mohamed
+- Built *(Detail Screen)* (Poster, Title, Overview, Rating, Release Date).
+- Configured *(Retrofit)* for API communication.
+- Created *(API Service interfaces)* with all required endpoints.
+- Verified successful connection between (the app and the API).
+- Implemented *(Jetpack Navigation Component)* for seamless screen transitions.
+- Designed and integrated the *(app logo)*.
+- Developed a custom *(Splash Screen)* with background styling.
+- Implemented *(security configuration)* by storing the TMDB API key securely as required.
 
 ---
 
