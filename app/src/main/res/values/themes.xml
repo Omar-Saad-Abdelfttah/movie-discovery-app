@@ -6,7 +6,8 @@
 
     <!-- ثيم شاشة البداية -->
     <style name="Theme.MovieApp.Splash" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:windowBackground">@color/splash_background</item>
+        <!-- الخلفية هتبقى الصورة -->
+        <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
 
 </resources>
