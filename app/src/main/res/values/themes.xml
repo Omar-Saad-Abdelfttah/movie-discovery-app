@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- الثيم الرئيسي للتطبيق -->
+
     <style name="Theme.Movie_Discovery_App" parent="android:Theme.Material.Light.NoActionBar" />
 
-    <!-- ثيم شاشة البداية -->
+
     <style name="Theme.MovieApp.Splash" parent="android:Theme.Material.Light.NoActionBar">
-        <!-- الخلفية هتبقى الصورة -->
+
         <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
 
