@@ -115,5 +115,5 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ### 🔍 Bassem Ragy Yehia
 - Implemented the NavigationGraph connecting (Splash, Home, Search, and Details) screens using Jetpack Compose Navigation.
-- Developed the Movie Details Screen displaying (poster, title, rating, release date, and overview)
+- Developed the Movie Details Screen displaying (poster, title, rating, release date, and overview) with smooth slide and fade animations.
 ---
