@@ -121,4 +121,5 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 - Created the MovieItem composable to show each movie card with its poster and title.
 - Built the Repository layer to fetch movies, movie details, and search results directly from the TMDB API.
 - Mapped API responses into clean Movie objects using toMovie() for UI presentation.
+- Applied a modular structure separating data, UI, and navigation logic for easier scalability.
 ---
