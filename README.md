@@ -119,4 +119,5 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 - Built the Home Screen using a responsive grid layout and integrated search navigation.
 - Connected screens through safe movieId passing to ensure data consistency between routes.
 - Created the MovieItem composable to show each movie card with its poster and title.
+- Built the Repository layer to fetch movies, movie details, and search results directly from the TMDB API.
 ---
