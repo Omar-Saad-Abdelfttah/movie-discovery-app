@@ -72,10 +72,16 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 ## 📌 Roles & Responsibilities  
 
 ### 👑 Omar Saad Abdel-Fattah (Team Leader)  
-- Project Leader & Documentation (README, project plan, roles).  
-- Review & merge pull requests.  
-- UI Polish (Animations, Loading Indicators, Error Screens).  
-- Unit Testing (Search & API functions).  
+- Built the base project structure using Jetpack Compose.
+- Implemented MainActivity and configured NavigationGraph to connect all screens.
+- Developed the Home Screen (MovieGridScreen) for displaying popular movies.
+- Created and connected the Search Screen with real-time TMDB data fetching.
+- Added and structured the Movie Details navigation for individual movie pages.
+- Integrated TMDB API inside Repository and ViewModel for dynamic movie data.
+- Improved MovieGridScreen UI with dark theme, padding, and responsive grid layout.
+- Added a Compose-based Splash Screen with loading animation at app start.
+- Refactored MainActivity navigation logic for cleaner and more stable transitions.
+- Enhanced UX by handling loading states, empty results, and smooth animations.
 
 ---
 
