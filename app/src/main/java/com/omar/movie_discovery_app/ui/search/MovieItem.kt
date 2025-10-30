@@ -24,4 +24,29 @@ fun MovieItem(
         modifier = Modifier
             .width(150.dp)
             .clickable { onClick(movie) }
-    )
+    ) {
+        val posterUrl = "https://image.tmdb.org/t/p/w500${movie.poster_path}"
+        AsyncImage(
+            model = movie.imageUrl,
+            contentDescription = movie.title,
+            modifier = Modifier
+                .height(200.dp)
+                .clip(RoundedCornerShape(12.dp)),
+            contentScale = ContentScale.Crop
+        )
+        Text(
+            text = movie.title,
+            color = Color.White,
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.padding(top = 8.dp)
+        )
+    }
+
+
+
+
+
+
+
+
+}
