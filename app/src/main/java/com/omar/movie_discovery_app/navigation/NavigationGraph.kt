@@ -23,6 +23,8 @@ fun NavigationGraph(navController: NavHostController) {
             SplashScreen(navController = navController)
         }
 
+
+
         composable("home") {
             MovieGridScreen(
                 onMovieClick = { movie ->
@@ -34,6 +36,8 @@ fun NavigationGraph(navController: NavHostController) {
             )
         }
 
+
+
         composable("search") {
             SearchScreen(
                 navController = navController,
@@ -42,6 +46,8 @@ fun NavigationGraph(navController: NavHostController) {
                 }
             )
         }
+
+
 
         composable(
             route = "details/{movieId}",
@@ -53,5 +59,7 @@ fun NavigationGraph(navController: NavHostController) {
                 movieId = movieId
             )
         }
+
+
     }
 }
