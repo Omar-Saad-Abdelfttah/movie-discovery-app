@@ -122,4 +122,5 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 - Built the Repository layer to fetch movies, movie details, and search results directly from the TMDB API.
 - Mapped API responses into clean Movie objects using toMovie() for UI presentation.
 - Applied a modular structure separating data, UI, and navigation logic for easier scalability.
+- Focused on improving the UI flow, ensuring smooth transitions and organized code readability.
 ---
