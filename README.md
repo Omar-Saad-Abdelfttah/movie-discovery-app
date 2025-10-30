@@ -114,6 +114,6 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 ---
 
 ### 🔍 Bassem Ragy Yehia
-- Implemented the NavigationGraph connecting (Splash, Home, Search, and Details) 
+- Implemented the NavigationGraph connecting (Splash, Home, Search, and Details) screens using Jetpack Compose Navigation.
 
 ---
