@@ -117,4 +117,5 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 - Implemented the NavigationGraph connecting (Splash, Home, Search, and Details) screens using Jetpack Compose Navigation.
 - Developed the Movie Details Screen displaying (poster, title, rating, release date, and overview) with smooth slide and fade animations.
 - Built the Home Screen using a responsive grid layout and integrated search navigation.
+- Connected screens through safe movieId passing to ensure data consistency between routes.
 ---
