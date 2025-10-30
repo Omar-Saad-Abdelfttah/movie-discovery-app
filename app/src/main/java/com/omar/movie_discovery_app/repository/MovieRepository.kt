@@ -17,4 +17,13 @@ class MovieRepository {
 
         return apiMovies.map { it.toMovie() }
     }
+    suspend fun fetchMovieDetails(movieId: Int): MovieDetailsResponse {
+        return RetrofitInstance.api.getMovieDetails(movieId, apiKey)
+    }
+
+    suspend fun searchMovies(query: String): List<Movie> {
+        val response = RetrofitInstance.api.searchMovies(apiKey, query)
+        return response.results.map { it.toMovie() }
+    }
+
 }
