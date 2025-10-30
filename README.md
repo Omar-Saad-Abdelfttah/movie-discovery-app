@@ -113,10 +113,6 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-### 🔍 Bassem Ragy Yehia  
-- Add Search functionality (search bar + results).  
-- Secure API key in `gradle.properties`.  
-- Improve performance (Caching, Lazy Loading).  
-- Apply final UI polish (animations, error handling, loading indicators).  
+### 🔍 Bassem Ragy Yehia
 
 ---
