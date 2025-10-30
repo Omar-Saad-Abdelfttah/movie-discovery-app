@@ -118,4 +118,5 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 - Developed the Movie Details Screen displaying (poster, title, rating, release date, and overview) with smooth slide and fade animations.
 - Built the Home Screen using a responsive grid layout and integrated search navigation.
 - Connected screens through safe movieId passing to ensure data consistency between routes.
+- Created the MovieItem composable to show each movie card with its poster and title.
 ---
