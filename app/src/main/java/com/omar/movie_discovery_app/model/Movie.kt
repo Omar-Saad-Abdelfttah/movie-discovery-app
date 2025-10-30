@@ -10,7 +10,8 @@ data class Movie(
     val poster_path: String? = null,
     val vote_average: Double? = 0.0,
     val release_date: String? = ""
-) {
+)
+{
     val imageUrl: String
         get() = "https://image.tmdb.org/t/p/w500$poster_path"
 }

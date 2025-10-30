@@ -14,7 +14,12 @@ class MainActivity : ComponentActivity() {
             MovieApp()
         }
     }
+
+
 }
+
+
+
 
 @Composable
 fun MovieApp() {
