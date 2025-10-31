@@ -113,10 +113,14 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-### 🔍 Bassem Ragy Yehia  
-- Add Search functionality (search bar + results).  
-- Secure API key in `gradle.properties`.  
-- Improve performance (Caching, Lazy Loading).  
-- Apply final UI polish (animations, error handling, loading indicators).  
-
+### 🔍 Bassem Ragy Yehia
+- Implemented the NavigationGraph connecting (Splash, Home, Search, and Details) screens using Jetpack Compose Navigation.
+- Developed the Movie Details Screen displaying (poster, title, rating, release date, and overview) with smooth slide and fade animations.
+- Built the Home Screen using a responsive grid layout and integrated search navigation.
+- Connected screens through safe movieId passing to ensure data consistency between routes.
+- Created the MovieItem composable to show each movie card with its poster and title.
+- Built the Repository layer to fetch movies, movie details, and search results directly from the TMDB API.
+- Mapped API responses into clean Movie objects using toMovie() for UI presentation.
+- Applied a modular structure separating data, UI, and navigation logic for easier scalability.
+- Focused on improving the UI flow, ensuring smooth transitions and organized code readability.
 ---
