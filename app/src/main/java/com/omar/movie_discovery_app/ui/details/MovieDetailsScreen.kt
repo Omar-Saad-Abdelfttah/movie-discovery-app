@@ -23,6 +23,12 @@ import coil.compose.AsyncImage
 import com.omar.movie_discovery_app.model.MovieDetailsResponse
 import com.omar.movie_discovery_app.repository.MovieRepository
 import kotlinx.coroutines.launch
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.text.style.TextAlign
+import com.omar.movie_discovery_app.model.CastMember
+
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
@@ -32,19 +38,25 @@ fun MovieDetailsScreenById(
 ) {
     val repository = remember { MovieRepository() }
     var movieDetails by remember { mutableStateOf<MovieDetailsResponse?>(null) }
+    var movieCast by remember { mutableStateOf<List<CastMember>>(emptyList()) }
+
     val coroutineScope = rememberCoroutineScope()
     val scrollState = rememberScrollState()
 
-    LaunchedEffect(movieId) {
+    LaunchedEffect(key1 = movieId) {
         coroutineScope.launch {
-            movieDetails = try {
-                repository.fetchMovieDetails(movieId)
+            try {
+                val detailsResponse = repository.fetchMovieDetails(movieId)
+                val castResponse = repository.getMovieCast(movieId)
+
+                movieDetails = detailsResponse
+                movieCast = castResponse
             } catch (e: Exception) {
                 e.printStackTrace()
-                null
             }
         }
     }
+
 
     Box(
         modifier = Modifier
@@ -140,6 +152,43 @@ fun MovieDetailsScreenById(
                         lineHeight = 23.sp,
                         modifier = Modifier.padding(horizontal = 16.dp)
                     )
+
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(
+                        text = "Cast:",
+                        color = Color.White,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.padding(start = 16.dp)
+                    )
+
+                    LazyRow(
+                        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
+                    ) {
+                        items(movieCast) { castMember ->
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                modifier = Modifier
+                                    .padding(end = 12.dp)
+                                    .width(100.dp)
+                            ) {
+                                AsyncImage(
+                                    model = "https://image.tmdb.org/t/p/w500${castMember.profile_path}",
+                                    contentDescription = castMember.name,
+                                    modifier = Modifier
+                                        .size(100.dp)
+                                        .clip(RoundedCornerShape(12.dp))
+                                )
+                                Text(
+                                    text = castMember.name,
+                                    color = Color.White,
+                                    fontSize = 13.sp,
+                                    maxLines = 1
+                                )
+                            }
+                        }
+                    }
+
                 }
             }
         }
