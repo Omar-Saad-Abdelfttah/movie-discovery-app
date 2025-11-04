@@ -3,6 +3,8 @@ package com.omar.movie_discovery_app.repository
 import com.omar.movie_discovery_app.data.network.RetrofitInstance
 import com.omar.movie_discovery_app.model.ApiMovie
 import com.omar.movie_discovery_app.model.Movie
+import com.omar.movie_discovery_app.model.CastMember
+import com.omar.movie_discovery_app.model.CastResponse
 import com.omar.movie_discovery_app.model.MovieDetailsResponse
 import com.omar.movie_discovery_app.model.toMovie
 
@@ -24,12 +26,14 @@ class MovieRepository {
     }
 
 
-
     suspend fun searchMovies(query: String): List<Movie> {
         val response = RetrofitInstance.api.searchMovies(apiKey, query)
         return response.results.map { it.toMovie() }
     }
 
 
-
+    suspend fun getMovieCast(movieId: Int): List<CastMember> {
+        val response = RetrofitInstance.api.getMovieCast(movieId, apiKey)
+        return response.cast
+    }
 }
