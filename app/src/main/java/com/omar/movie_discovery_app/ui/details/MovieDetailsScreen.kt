@@ -158,6 +158,7 @@ fun MovieDetailsScreenById(
                         color = Color.White,
                         fontSize = 17.sp,
                         lineHeight = 23.sp,
+
                         modifier = Modifier.padding(horizontal = 16.dp)
                     )
 
