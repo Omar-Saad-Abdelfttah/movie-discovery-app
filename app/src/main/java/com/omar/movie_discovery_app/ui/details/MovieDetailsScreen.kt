@@ -181,6 +181,7 @@ fun MovieDetailsScreenById(
                                 horizontalAlignment = Alignment.CenterHorizontally,
                                 modifier = Modifier
                                     .padding(end = 12.dp)
+
                                     .width(100.dp)
                             ) {
                                 AsyncImage(
