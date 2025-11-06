@@ -172,6 +172,8 @@ fun MovieDetailsScreenById(
                     )
 
                     LazyRow(
+
+
                         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
                     ) {
                         items(movieCast) { castMember ->
