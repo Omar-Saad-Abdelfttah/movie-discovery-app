@@ -145,7 +145,10 @@ fun MovieDetailsScreenById(
                     Text(
                         text = "Release Date: ${details.releaseDate ?: "Unknown"}",
                         color = Color(0xFFB0BEC5),
+
                         fontSize = 15.sp
+
+
                     )
 
                     Spacer(modifier = Modifier.height(16.dp))
