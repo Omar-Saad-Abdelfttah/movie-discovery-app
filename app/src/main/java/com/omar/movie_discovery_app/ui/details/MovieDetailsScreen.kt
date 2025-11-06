@@ -194,7 +194,9 @@ fun MovieDetailsScreenById(
                                 Text(
                                     text = castMember.name,
                                     color = Color.White,
+
                                     fontSize = 13.sp,
+
                                     maxLines = 1
                                 )
                             }
