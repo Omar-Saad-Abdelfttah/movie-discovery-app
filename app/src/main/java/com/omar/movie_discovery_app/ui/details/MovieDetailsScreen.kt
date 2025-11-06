@@ -36,7 +36,7 @@ fun MovieDetailsScreenById(
     navController: NavController,
     movieId: Int
 ) {
-    val repository = remember { MovieRepository() }
+     val repository = remember { MovieRepository() }
     var movieDetails by remember { mutableStateOf<MovieDetailsResponse?>(null) }
     var movieCast by remember { mutableStateOf<List<CastMember>>(emptyList()) }
 
@@ -122,9 +122,12 @@ fun MovieDetailsScreenById(
 
                     Text(
                         text = details.title,
+
                         color = Color.White,
+
                         fontSize = 26.sp,
-                        fontWeight = FontWeight.Bold
+
+                          fontWeight = FontWeight.Bold
                     )
 
                     Spacer(modifier = Modifier.height(8.dp))
