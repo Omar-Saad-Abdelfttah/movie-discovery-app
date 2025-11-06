@@ -125,6 +125,8 @@ fun MovieDetailsScreenById(
 
                         color = Color.White,
 
+
+
                         fontSize = 26.sp,
 
                           fontWeight = FontWeight.Bold
