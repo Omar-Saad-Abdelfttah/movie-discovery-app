@@ -82,7 +82,15 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 - Added a Compose-based Splash Screen with loading animation at app start.
 - Refactored MainActivity navigation logic for cleaner and more stable transitions.
 - Enhanced UX by handling loading states, empty results, and smooth animations.
-
+  ✨ New Updates 
+🔸 Shimmer Loading System
+- Added a complete shimmer loading flow for the Movie Details Screen.
+- Created a fully reusable ShimmerEffect.kt based on valentinilk shimmer library.
+- Implemented ShimmerMovieDetails.kt as a full skeleton placeholder while data loads.
+🔸 Movie Details Improvements
+- Updated MovieDetailsScreenById to dynamically switch between shimmer state and real content using AnimatedContent.
+- Improved the cast section with shimmer placeholders and cleaner layout.
+- Enhanced transition animations and reduced layout jank for a smoother user experience.
 ---
 
 ### 👨‍🎨 Youssef Gerges Awad  
