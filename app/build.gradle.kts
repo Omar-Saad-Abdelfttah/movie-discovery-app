@@ -72,5 +72,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
     implementation("io.coil-kt:coil-compose:2.4.0")
-
+    implementation("com.google.accompanist:accompanist-placeholder-material:0.32.0")
+    implementation("com.google.accompanist:accompanist-placeholder-material:0.33.2-alpha")
+    implementation("com.valentinilk.shimmer:compose-shimmer:1.2.0")
 }
