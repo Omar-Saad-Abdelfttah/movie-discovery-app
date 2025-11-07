@@ -101,11 +101,17 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 
 ---
 
-### 🔗 Omar Hamdy Fathy 
-- Integrate Retrofit with TMDB API.  
-- Create data models for JSON responses.  
-- Connect API with UI (Lazy grid of movies).  
-- Handle network errors & loading states.  
+### 🔗 Omar Hamdy Fathy
+- Added **MovieCard.kt** to display movies on the main screen.
+- Fixed and improved **MovieDetailsScreen** to fetch real movie details from the API.
+- Enhanced **MovieDetailsScreen** UI with dark theme and better layout.
+- Added **search feature** in SearchScreen with real-time API integration.
+- Created **CastMember** and **CastResponse** models for movie cast data.
+- Updated **ApiService** and **MovieRepository** to handle cast requests.
+- Extended **MovieDetailsViewModel** to manage movie and cast information.
+- Updated **MovieDetailsScreen** to show movie cast (actors list with images).
+- Improved overall UI performance, scrolling, and error handling.
+
 
 ---
 
