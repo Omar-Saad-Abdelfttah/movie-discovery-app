@@ -1,11 +1,19 @@
 package com.omar.movie_discovery_app.ui.details
 
-import androidx.compose.animation.*
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
@@ -16,19 +24,15 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.omar.movie_discovery_app.model.MovieDetailsResponse
 import com.omar.movie_discovery_app.repository.MovieRepository
-import kotlinx.coroutines.launch
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.ui.text.style.TextAlign
 import com.omar.movie_discovery_app.model.CastMember
-
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
@@ -36,27 +40,24 @@ fun MovieDetailsScreenById(
     navController: NavController,
     movieId: Int
 ) {
-     val repository = remember { MovieRepository() }
+    val repository = remember { MovieRepository() }
+
     var movieDetails by remember { mutableStateOf<MovieDetailsResponse?>(null) }
     var movieCast by remember { mutableStateOf<List<CastMember>>(emptyList()) }
 
     val coroutineScope = rememberCoroutineScope()
     val scrollState = rememberScrollState()
 
-    LaunchedEffect(key1 = movieId) {
+    LaunchedEffect(movieId) {
         coroutineScope.launch {
             try {
-                val detailsResponse = repository.fetchMovieDetails(movieId)
-                val castResponse = repository.getMovieCast(movieId)
-
-                movieDetails = detailsResponse
-                movieCast = castResponse
+                movieDetails = repository.fetchMovieDetails(movieId)
+                movieCast = repository.getMovieCast(movieId)
             } catch (e: Exception) {
                 e.printStackTrace()
             }
         }
     }
-
 
     Box(
         modifier = Modifier
@@ -66,21 +67,16 @@ fun MovieDetailsScreenById(
         AnimatedContent(
             targetState = movieDetails,
             transitionSpec = {
-                slideInVertically(
-                    initialOffsetY = { it / 2 },
-                    animationSpec = tween(600)
-                ) + fadeIn(animationSpec = tween(600)) with
+                (slideInVertically(
+                    animationSpec = tween(600),
+                    initialOffsetY = { fullHeight -> fullHeight / 2 }
+                ) + fadeIn(animationSpec = tween(600))) togetherWith
                         fadeOut(animationSpec = tween(300))
             },
             label = "MovieDetailsAnimation"
         ) { details ->
             if (details == null) {
-                Box(
-                    modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
-                    CircularProgressIndicator(color = Color.White)
-                }
+                ShimmerMovieDetails()
             } else {
                 Column(
                     modifier = Modifier
@@ -122,14 +118,9 @@ fun MovieDetailsScreenById(
 
                     Text(
                         text = details.title,
-
                         color = Color.White,
-
                         fontSize = 26.sp,
-
-
-
-                          fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold
                     )
 
                     Spacer(modifier = Modifier.height(8.dp))
@@ -145,10 +136,7 @@ fun MovieDetailsScreenById(
                     Text(
                         text = "Release Date: ${details.releaseDate ?: "Unknown"}",
                         color = Color(0xFFB0BEC5),
-
                         fontSize = 15.sp
-
-
                     )
 
                     Spacer(modifier = Modifier.height(16.dp))
@@ -158,11 +146,11 @@ fun MovieDetailsScreenById(
                         color = Color.White,
                         fontSize = 17.sp,
                         lineHeight = 23.sp,
-
                         modifier = Modifier.padding(horizontal = 16.dp)
                     )
 
-                    Spacer(modifier = Modifier.height(16.dp))
+                    Spacer(modifier = Modifier.height(20.dp))
+
                     Text(
                         text = "Cast:",
                         color = Color.White,
@@ -172,8 +160,6 @@ fun MovieDetailsScreenById(
                     )
 
                     LazyRow(
-
-
                         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
                     ) {
                         items(movieCast) { castMember ->
@@ -181,7 +167,6 @@ fun MovieDetailsScreenById(
                                 horizontalAlignment = Alignment.CenterHorizontally,
                                 modifier = Modifier
                                     .padding(end = 12.dp)
-
                                     .width(100.dp)
                             ) {
                                 AsyncImage(
@@ -194,15 +179,13 @@ fun MovieDetailsScreenById(
                                 Text(
                                     text = castMember.name,
                                     color = Color.White,
-
                                     fontSize = 13.sp,
-
-                                    maxLines = 1
+                                    maxLines = 1,
+                                    textAlign = TextAlign.Center
                                 )
                             }
                         }
                     }
-
                 }
             }
         }
