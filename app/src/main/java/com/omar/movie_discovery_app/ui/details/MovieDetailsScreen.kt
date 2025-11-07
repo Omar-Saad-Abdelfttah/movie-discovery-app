@@ -36,7 +36,7 @@ fun MovieDetailsScreenById(
     navController: NavController,
     movieId: Int
 ) {
-    val repository = remember { MovieRepository() }
+     val repository = remember { MovieRepository() }
     var movieDetails by remember { mutableStateOf<MovieDetailsResponse?>(null) }
     var movieCast by remember { mutableStateOf<List<CastMember>>(emptyList()) }
 
@@ -122,9 +122,14 @@ fun MovieDetailsScreenById(
 
                     Text(
                         text = details.title,
+
                         color = Color.White,
+
                         fontSize = 26.sp,
-                        fontWeight = FontWeight.Bold
+
+
+
+                          fontWeight = FontWeight.Bold
                     )
 
                     Spacer(modifier = Modifier.height(8.dp))
@@ -140,7 +145,10 @@ fun MovieDetailsScreenById(
                     Text(
                         text = "Release Date: ${details.releaseDate ?: "Unknown"}",
                         color = Color(0xFFB0BEC5),
+
                         fontSize = 15.sp
+
+
                     )
 
                     Spacer(modifier = Modifier.height(16.dp))
@@ -150,6 +158,7 @@ fun MovieDetailsScreenById(
                         color = Color.White,
                         fontSize = 17.sp,
                         lineHeight = 23.sp,
+
                         modifier = Modifier.padding(horizontal = 16.dp)
                     )
 
@@ -163,6 +172,8 @@ fun MovieDetailsScreenById(
                     )
 
                     LazyRow(
+
+
                         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
                     ) {
                         items(movieCast) { castMember ->
@@ -170,6 +181,7 @@ fun MovieDetailsScreenById(
                                 horizontalAlignment = Alignment.CenterHorizontally,
                                 modifier = Modifier
                                     .padding(end = 12.dp)
+
                                     .width(100.dp)
                             ) {
                                 AsyncImage(
@@ -182,7 +194,9 @@ fun MovieDetailsScreenById(
                                 Text(
                                     text = castMember.name,
                                     color = Color.White,
+
                                     fontSize = 13.sp,
+
                                     maxLines = 1
                                 )
                             }
