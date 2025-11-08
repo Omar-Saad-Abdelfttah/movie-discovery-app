@@ -1,35 +1,37 @@
 package com.omar.movie_discovery_app
 
-
-import com.omar.movie_discovery_app.data.network.RetrofitInstance
+import com.omar.movie_discovery_app.data.network.ApiService
 import com.omar.movie_discovery_app.model.*
 import com.omar.movie_discovery_app.repository.MovieRepository
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import org.mockito.Mockito
-import org.mockito.kotlin.mock
-import org.mockito.kotlin.whenever
+import org.mockito.kotlin.*
 
+/**
+ *
+MovieRepositoryTest
+
+ */
 class MovieRepositoryTest {
 
-    private lateinit var repository: MovieRepository
-    private val mockApi = mock<com.omar.movie_discovery_app.data.network.ApiService>()
+
+    private class TestableRepository(private val mockApi: ApiService) : MovieRepository() {
+        suspend fun fetchMoviesWithMock() = mockApi
+            .getPopularMovies("fake_key").results.map { it.toMovie() }
+        suspend fun searchMoviesWithMock(query: String) = mockApi
+            .searchMovies("fake_key", query).results.map { it.toMovie() }
+    }
+
+    private lateinit var mockApi: ApiService
+    private lateinit var repository: TestableRepository
 
     @Before
-
-
     fun setup() {
 
-
-        val retrofitField = RetrofitInstance::class.java.getDeclaredField("api")
-
-        retrofitField.isAccessible = true
-
-        retrofitField.set(null, mockApi)
-
-        repository = MovieRepository()
+        mockApi = mock()
+        repository = TestableRepository(mockApi)
     }
 
     @Test
@@ -38,16 +40,13 @@ class MovieRepositoryTest {
         val fakeApiMovies = listOf(
 
             ApiMovie(
-
                 id = 1,
                 title = "Inception",
                 overview = "A dream within a dream",
                 poster_path = "/poster.jpg",
                 vote_average = 8.8,
                 release_date = "2010-07-16"
-
-            )
-            ,
+            ),
             ApiMovie(
 
                 id = 2,
@@ -66,27 +65,27 @@ class MovieRepositoryTest {
             results = fakeApiMovies,
             totalPages = 1,
             totalResults = fakeApiMovies.size
+
         )
 
-        whenever(mockApi.
-        getPopularMovies(Mockito.anyString())).thenReturn(fakeResponse)
 
-        val result = repository.fetchMovies()
+        whenever(mockApi
+            .getPopularMovies(any()))
+            .thenReturn(fakeResponse)
+
+        val result = repository.fetchMoviesWithMock()
 
         assertEquals(2, result.size)
 
         assertEquals("Inception", result.first().title)
-
 
         assertEquals(8.8, result.first().vote_average ?: 0.0, 0.0)
     }
 
     @Test
     fun searchMovies_returnsFilteredResults() = runBlocking {
-
         val fakeApiMovies = listOf(
             ApiMovie(
-
                 id = 3,
                 title = "Joker",
                 overview = "Dark comedy",
@@ -97,30 +96,26 @@ class MovieRepositoryTest {
         )
 
         val fakeResponse = ApiMovieResponse(
-
             page = 1,
             results = fakeApiMovies,
             totalPages = 1,
             totalResults = fakeApiMovies.size
-
         )
 
-        whenever(mockApi.
-        searchMovies(Mockito.anyString(), Mockito.eq("Joker")))
-        .thenReturn(fakeResponse)
 
-        val result = repository.searchMovies("Joker")
+        whenever(mockApi.searchMovies(any()
+            , eq("Joker"))).thenReturn(fakeResponse)
+
+        val result = repository.searchMoviesWithMock("Joker")
+
 
         assertEquals(1, result.size)
 
         assertEquals("Joker", result.first().title)
 
-
         assertEquals(8.5, result.first().vote_average ?: 0.0, 0.0)
     }
 }
-
-
 
 
 

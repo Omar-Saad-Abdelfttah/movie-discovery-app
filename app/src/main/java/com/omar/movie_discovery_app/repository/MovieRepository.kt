@@ -8,7 +8,7 @@ import com.omar.movie_discovery_app.model.CastResponse
 import com.omar.movie_discovery_app.model.MovieDetailsResponse
 import com.omar.movie_discovery_app.model.toMovie
 
-class MovieRepository {
+open class MovieRepository {
 
     private val apiKey = "c72e576eec8cf631df3cf7cf01b5bff2"
 
