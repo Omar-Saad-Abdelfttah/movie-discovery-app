@@ -6,22 +6,19 @@ import com.omar.movie_discovery_app.model.toMovie
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
-
 class MapperTest {
 
     @Test
     fun apiMovie_toMovie_mapsCorrectly() {
-
         val apiMovie = ApiMovie(
-
             id = 1,
             title = "Inception",
             overview = "A dream within a dream",
             poster_path = "/poster.jpg",
             vote_average = 8.8,
             release_date = "2010-07-16"
-
         )
+
 
         val movie = apiMovie.toMovie()
 

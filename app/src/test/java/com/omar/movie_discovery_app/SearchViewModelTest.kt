@@ -23,23 +23,18 @@ class SearchViewModelTest {
     private lateinit var viewModel: SearchViewModel
 
     @Before
-
     fun setup() {
-
         Dispatchers.setMain(testDispatcher)
         viewModel = SearchViewModel()
     }
 
     @After
-
     fun tearDown() {
         Dispatchers.resetMain()
 
     }
 
-
     @Test
-
     fun searchMovies_initialState_isEmpty() = runBlocking {
         val initialResults = viewModel.searchResults.first()
 
@@ -47,7 +42,6 @@ class SearchViewModelTest {
     }
 
     @Test
-
     fun searchMovies_withBlankQuery_returnsEmptyList() = runBlocking {
         viewModel.searchMovies("")
         val results = viewModel.searchResults.first()
@@ -57,7 +51,6 @@ class SearchViewModelTest {
 
 
     @Test
-
     fun movieData_structure_isCorrect() {
 
         val movie = Movie(

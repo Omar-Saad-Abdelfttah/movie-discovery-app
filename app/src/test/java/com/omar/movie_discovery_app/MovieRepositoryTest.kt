@@ -9,19 +9,11 @@ import org.junit.Before
 import org.junit.Test
 import org.mockito.kotlin.*
 
-/**
- *
-MovieRepositoryTest
 
- */
 class MovieRepositoryTest {
-
-
     private class TestableRepository(private val mockApi: ApiService) : MovieRepository() {
-        suspend fun fetchMoviesWithMock() = mockApi
-            .getPopularMovies("fake_key").results.map { it.toMovie() }
-        suspend fun searchMoviesWithMock(query: String) = mockApi
-            .searchMovies("fake_key", query).results.map { it.toMovie() }
+        suspend fun fetchMoviesWithMock() = mockApi .getPopularMovies("fake_key").results.map { it.toMovie() }
+        suspend fun searchMoviesWithMock(query: String) = mockApi.searchMovies("fake_key", query).results.map { it.toMovie()}
     }
 
     private lateinit var mockApi: ApiService
@@ -29,7 +21,6 @@ class MovieRepositoryTest {
 
     @Before
     fun setup() {
-
         mockApi = mock()
         repository = TestableRepository(mockApi)
     }
@@ -38,7 +29,6 @@ class MovieRepositoryTest {
     fun fetchMovies_returnsMappedList() = runBlocking {
 
         val fakeApiMovies = listOf(
-
             ApiMovie(
                 id = 1,
                 title = "Inception",
@@ -48,7 +38,6 @@ class MovieRepositoryTest {
                 release_date = "2010-07-16"
             ),
             ApiMovie(
-
                 id = 2,
                 title = "Avatar",
                 overview = "Pandora story",
@@ -60,7 +49,6 @@ class MovieRepositoryTest {
         )
 
         val fakeResponse = ApiMovieResponse(
-
             page = 1,
             results = fakeApiMovies,
             totalPages = 1,
@@ -103,8 +91,7 @@ class MovieRepositoryTest {
         )
 
 
-        whenever(mockApi.searchMovies(any()
-            , eq("Joker"))).thenReturn(fakeResponse)
+        whenever(mockApi.searchMovies(any(),eq("Joker"))).thenReturn(fakeResponse)
 
         val result = repository.searchMoviesWithMock("Joker")
 

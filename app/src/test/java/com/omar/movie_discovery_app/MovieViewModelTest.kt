@@ -30,21 +30,15 @@ class MovieViewModelTest {
 
     @Before
     fun setup() {
-
         Dispatchers.setMain(dispatcher)
-
         repository = mock()
-
         viewModel = MovieViewModel()
-
     }
 
 
     @After
     fun tearDown() {
-
         Dispatchers.resetMain()
-
     }
 
 
@@ -62,9 +56,7 @@ class MovieViewModelTest {
                  .thenReturn(fakeMovies)
 
         viewModel.loadMovies()
-
         dispatcher.scheduler.advanceUntilIdle()
-
         val result = viewModel.movies.first()
 
         assertEquals(0, result.size)

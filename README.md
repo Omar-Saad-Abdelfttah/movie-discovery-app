@@ -116,14 +116,32 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 ---
 
 ### 📱 Ahmed Magdy Mohamed
-- Built *(Detail Screen)* (Poster, Title, Overview, Rating, Release Date).
-- Configured *(Retrofit)* for API communication.
-- Created *(API Service interfaces)* with all required endpoints.
-- Verified successful connection between (the app and the API).
-- Implemented *(Jetpack Navigation Component)* for seamless screen transitions.
-- Designed and integrated the *(app logo)*.
-- Developed a custom *(Splash Screen)* with background styling.
-- Implemented *(security configuration)* by storing the TMDB API key securely as required.
+- 🎨 *App Design*
+  - Designed and integrated the *(App Logo)* to establish a clean and modern icon identity.
+  - Developed a *(Splash Screen)* with styled image background and smooth transition animations.
+- 🎬 *App UI*
+  - Built the *(Detail Screen)* displaying (Poster, Title, Overview, Rating, and Release Date).
+- 🔗 *App Navigation*
+  - Implemented the *(Jetpack Navigation Component)* in NavigationGraph for details for dynamic screen transitions.
+- 🌐 *Networking & API Integration*
+  - Configured *(Retrofit)* for reliable communication with the *TMDB API*.
+  - Created and structured *(API Service Interfaces)* defining all required endpoints.
+  - Verified full connection and data flow between *the App and TMDB API*.
+- 🔒 *security*
+  - Applied *(security configuration)* to store the TMDB API key safely using secrets.properties.
+- 🧪 *Unit Testing & Code Validation*
+  - Implemented a complete *(Unit Testing Suite)* to ensure app reliability and data correctness.
+  - Built (MapperTest) to validate :
+    - correct mapping from ApiMovie API model to the app’s Movie domain model.
+  - Built (MovieDetailsViewModelTest) to confirm :
+    - the initial ViewModel state {null movie details & empty cast list} before loading data.
+  - Built (SearchViewModelTest) to verify :
+    - search logic, blank-query handling, and correct StateFlow updates during search operations.
+  - Built (MovieViewModelTest) to check :
+    - movie-loading behavior and ensure consistent StateFlow initialization within the ViewModel.
+  - Built (MovieRepositoryTest) to test :
+    - API data fetching using mocked responses - ensure accurate model mapping - verify search functionality logic.
+  - Achieved *100% test success rate*, ensuring clean and maintainable code.
 
 ---
 
@@ -138,3 +156,19 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 - Applied a modular structure separating data, UI, and navigation logic for easier scalability.
 - Focused on improving the UI flow, ensuring smooth transitions and organized code readability.
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
