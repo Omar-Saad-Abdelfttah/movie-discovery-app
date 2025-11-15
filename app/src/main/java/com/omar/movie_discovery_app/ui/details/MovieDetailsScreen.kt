@@ -89,11 +89,13 @@ fun MovieDetailsScreenById(
                         AsyncImage(
                             model = details.posterUrl,
                             contentDescription = details.title,
-                            contentScale = ContentScale.Crop,
+//                            contentScale = ContentScale.Crop,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .height(320.dp)
-                                .clip(MaterialTheme.shapes.medium)
+                                .aspectRatio(0.67f)
+                                .height(260.dp)
+                                .clip(MaterialTheme.shapes.medium),
+                            contentScale = ContentScale.FillHeight
                         )
 
                         IconButton(
