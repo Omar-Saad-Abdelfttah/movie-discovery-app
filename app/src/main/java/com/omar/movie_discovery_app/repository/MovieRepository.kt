@@ -7,10 +7,11 @@ import com.omar.movie_discovery_app.model.CastMember
 import com.omar.movie_discovery_app.model.CastResponse
 import com.omar.movie_discovery_app.model.MovieDetailsResponse
 import com.omar.movie_discovery_app.model.toMovie
+import com.omar.movie_discovery_app.BuildConfig
 
 open class MovieRepository {
 
-    private val apiKey = "c72e576eec8cf631df3cf7cf01b5bff2"
+    private val apiKey = BuildConfig.TMDB_API_KEY
 
     suspend fun fetchMovies(): List<Movie> {
         val apiMovies: List<ApiMovie> = RetrofitInstance.api
@@ -19,7 +20,6 @@ open class MovieRepository {
 
         return apiMovies.map { it.toMovie() }
     }
-
 
     suspend fun fetchMovieDetails(movieId: Int): MovieDetailsResponse {
         return RetrofitInstance.api.getMovieDetails(movieId, apiKey)

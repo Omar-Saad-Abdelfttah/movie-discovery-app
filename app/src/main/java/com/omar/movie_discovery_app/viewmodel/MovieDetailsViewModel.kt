@@ -10,15 +10,12 @@ import kotlinx.coroutines.launch
 import com.omar.movie_discovery_app.model.CastMember
 import kotlinx.coroutines.launch
 
-
 class MovieDetailsViewModel : ViewModel() {
 
     private val repository = MovieRepository()
-
     private val _movieDetails = MutableStateFlow<MovieDetailsResponse?>(null)
     private val _movieCast = MutableStateFlow<List<CastMember>>(emptyList())
     val movieCast: StateFlow<List<CastMember>> get() = _movieCast
-
     val movieDetails: StateFlow<MovieDetailsResponse?> get() = _movieDetails
 
     fun loadMovieDetails(movieId: Int) {

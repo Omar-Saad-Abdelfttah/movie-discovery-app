@@ -9,7 +9,6 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 
-
 class MovieDetailsViewModelTest {
 
     @Test
@@ -20,7 +19,6 @@ class MovieDetailsViewModelTest {
         val cast = viewModel.movieCast.first()
 
         assertNull(details)
-
         assertTrue(cast.isEmpty())
     }
 }

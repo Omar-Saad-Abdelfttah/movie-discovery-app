@@ -22,8 +22,11 @@ android {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "TMDB_API_KEY", "\"${secretsProperties["TMDB_API_KEY"]}\"")
-
+        buildConfigField(
+            "String",
+            "TMDB_API_KEY",
+            "\"${secretsProperties.getProperty("TMDB_API_KEY")}\""
+        )
     }
 
     buildTypes {
@@ -49,9 +52,6 @@ android {
 }
 
 dependencies {
-
-
-
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.mockito:mockito-core:5.6.0")
     testImplementation("org.mockito.kotlin:mockito-kotlin:5.1.0")
@@ -65,13 +65,8 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-
-
     testImplementation("junit:junit:4.13.2")
-
-
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
-
 
     implementation("io.coil-kt:coil-compose:2.7.0")
 
@@ -96,7 +91,6 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.6.0")
 
     testImplementation(libs.junit)
-
 
     androidTestImplementation(libs.androidx.junit)
 
