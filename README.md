@@ -94,12 +94,16 @@ This project is part of the **Digital Egypt Pioneers Initiative**.
 ---
 
 ### 👨‍🎨 Youssef Gerges Awad  
-- Initialize project & GitHub repository.  
-- Set up Jetpack Compose environment.  
-- Build static UI screens (Home grid, Movie cards).  
-- Apply Material Design 3 principles.  
 
----
+---Role 5 – Review & Polish
+
+Performs code review for all newly submitted changes.
+
+Handles UI/UX polishing, including colors, themes, and styles.
+
+Adds light documentation inside the code (comments explaining the Compose functions).
+
+Ensures that the Static Home Screen works correctly without any issues.
 
 ### 🔗 Omar Hamdy Fathy
 - Added **MovieCard.kt** to display movies on the main screen.
