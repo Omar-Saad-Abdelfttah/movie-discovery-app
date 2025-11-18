@@ -119,4 +119,6 @@ dependencies {
     implementation("com.google.accompanist:accompanist-placeholder-material:0.33.2-alpha")
 
     implementation("com.valentinilk.shimmer:compose-shimmer:1.2.0")
+    implementation("com.google.accompanist:accompanist-placeholder-material:0.32.0")
+
 }

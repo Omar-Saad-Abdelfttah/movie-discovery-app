@@ -27,13 +27,11 @@ fun MovieCard(movie: Movie, onClick: (Movie) -> Unit) {
     val painter = rememberAsyncImagePainter(movie.imageUrl)
     val isLoading = painter.state is AsyncImagePainter.State.Loading
 
-    Box(
+    Column(
         modifier = Modifier
             .padding(8.dp)
             .width(150.dp)
             .clickable { onClick(movie) }
-            .clip(RoundedCornerShape(12.dp))
-            .background(Color(0xFF1C1C1C))
     ) {
 
         Image(
@@ -42,6 +40,7 @@ fun MovieCard(movie: Movie, onClick: (Movie) -> Unit) {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(220.dp)
+                .clip(RoundedCornerShape(12.dp))
                 .placeholder(
                     visible = isLoading,
                     highlight = PlaceholderHighlight.shimmer(),
@@ -50,23 +49,20 @@ fun MovieCard(movie: Movie, onClick: (Movie) -> Unit) {
             contentScale = ContentScale.Crop
         )
 
-        Box(
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Text(
+            text = movie.title,
+            color = Color.White,
+            style = MaterialTheme.typography.bodyMedium,
+            maxLines = 2,
             modifier = Modifier
-                .align(Alignment.BottomStart)
-                .fillMaxWidth()
-                .background(Color(0xAA000000))
-                .padding(6.dp)
-        ) {
-            Text(
-                text = movie.title,
-                color = Color.White,
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.placeholder(
+                .placeholder(
                     visible = isLoading,
                     highlight = PlaceholderHighlight.shimmer(),
                     color = Color.DarkGray
                 )
-            )
-        }
+                .padding(horizontal = 4.dp)
+        )
     }
 }
