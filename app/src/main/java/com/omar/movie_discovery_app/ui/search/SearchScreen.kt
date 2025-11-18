@@ -104,7 +104,7 @@ fun SearchScreen(
                 horizontalArrangement = Arrangement.spacedBy(16.dp),
                 modifier = Modifier.fillMaxSize()
             ) {
-                items(searchResults) { movie ->
+                  items(searchResults) { movie ->
                     MovieSearchItem(
                         movie = movie,
                         onClick = { onMovieClick(movie) }
